@@ -5,7 +5,7 @@
 // const otpGenerator = require("otp-generator")
 // const mailSender = require("../utils/mailSender");
 
-const bcrypt = require("bcryptjs");
+const bcrypt = require('bcrypt');
 const User = require("../models/User");
 const { genToken } = require("../utils/token");
 
@@ -80,7 +80,8 @@ exports.signup = async (req, res) => {
 
     return res.status(500).json({
       success: false,
-      message: "Registration failed",
+       message: error.message,
+
     });
   }
 };
