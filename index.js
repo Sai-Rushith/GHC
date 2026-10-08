@@ -20,6 +20,11 @@ app.use(cookieParser());
 app.use("/api/auth", require("./routes/auth"));
 app.use("/api/categories", require("./routes/category"));
 app.use("/api/products", require("./routes/Product"));
+app.use("/api/cart",require("./routes/cart"));
+app.use("/api/orders", require("./routes/Order"));
+app.use("/api/outlets", require("./routes/outlet"));
+app.use("/api/admin", require("./routes/admin"));
+
 
 // Health Check Route
 app.get("/", (req, res) => {
